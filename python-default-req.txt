@@ -3,3 +3,4 @@ sphinx_rtd_theme
 autopep8
 coverage
 pudb
+pytest
