@@ -5,3 +5,4 @@ coverage
 pudb
 pytest
 pylint
+mypy
