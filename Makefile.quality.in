@@ -1,0 +1,35 @@
+# Variable definitions.
+
+module = <thepackagename>
+vultureconfidence = 80
+
+
+# The make file code it self.
+quality: black-check vulture-check \
+	     mypy-check pylint-check \
+		 flake8-check bandit-check \
+	     isort-check
+
+black-check:
+	black --check --diff .
+
+vulture-check:
+	vulture --min-confidence $(vultureconfidence) .
+
+vulture-whitelist:
+	vulture --make-whitelist --min-confidence $(vultureconfidence) .
+
+mypy-check:
+	mypy -p $(module)
+
+pylint-check:
+	pylint $(module)
+
+flake8-check:
+	flake8
+
+bandit-check:
+	bandit -r .
+
+isort-check:
+	isort --check
