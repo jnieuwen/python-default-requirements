@@ -4,6 +4,9 @@ black
 isort
 mccabe
 mypy
-prospector
+flake8
+flake8-eradicate
+dlint
+pylint
 radon
 vulture
