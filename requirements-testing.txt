@@ -1,0 +1,4 @@
+pytest
+nose2
+pudb
+coverage
