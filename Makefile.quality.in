@@ -8,7 +8,7 @@ vultureconfidence = 80
 quality: black-check vulture-check \
 	     mypy-check pylint-check \
 		 flake8-check bandit-check \
-	     isort-check
+	     isort-check radon-info 
 
 black-check:
 	black --check --diff .
@@ -33,3 +33,7 @@ bandit-check:
 
 isort-check:
 	isort --check
+
+radon-info:
+	radon cc -n D -s $(module)
+	radon mi -s $(module)
