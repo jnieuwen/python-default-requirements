@@ -1,0 +1,8 @@
+bandit
+black
+isort
+mccabe
+mypy
+prospector
+radon
+vulture
