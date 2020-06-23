@@ -10,3 +10,4 @@ dlint
 pylint
 radon
 vulture
+pre-commit
